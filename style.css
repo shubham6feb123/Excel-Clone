@@ -22,6 +22,7 @@ body{
 
 .container{
   height: 100vh;
+  user-select: none;
 }
 
 .title_bar{
@@ -156,6 +157,7 @@ outline-color: var(--green);
   height:30px;
   border:1px solid var(--light_grey);
   display: flex;
+  overflow:hidden;
 }
 
 .column_name{
@@ -184,6 +186,8 @@ outline-color: var(--green);
   width:calc(100vw - 30px);
   height:calc(75vh - 30px);
   border:1px solid var(--light_grey);
+  overflow: scroll;
+  scrollbar-width:thin;
 }
 
 .cell_row{
@@ -196,12 +200,15 @@ outline-color: var(--green);
   border-right: 1px solid var(--grey);
   border-bottom: 1px solid var(--grey);
   cursor:cell;
-outline :none
+outline :none;
+overflow: hidden;
+ word-wrap: inherit;
 }
 
 .input_cell.selected{
   border: 2px solid var(--green);
   background-color: var(--white);
+  overflow: hidden;
 }
 
 .sheet_bar{
@@ -213,8 +220,8 @@ outline :none
 }
 
 .scroller_icon{
-font-size: 2.5em;
-padding: 0.2em 0em 0.2em 0em;
+font-size: 1.8em;
+padding: 0em 0em 0.2em 0em;
 }
 
 .scroller_icon:hover{
@@ -251,4 +258,23 @@ padding: 0.2em 0em 0.2em 0em;
 
 .selected{
   background-color: var(--light_grey);
+}
+
+/* multiselect feature for cells */
+.input_cell.top_cell_selected{
+  border-top:none;
+}
+
+.input_cell.bottom_cell_selected{
+  border-bottom:1px solid var(--light_grey);
+/*   border-top:none !important; */
+}
+
+.input_cell.left_cell_selected{
+  border-left:none;
+}
+
+.input_cell.right_cell_selected{
+  border-right:1x solid var(--light_grey);
+/*   border-top:none !important; */
 }
