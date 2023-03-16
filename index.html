@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Excel Clone</title>
+<!--   font family -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=EB+Garamond&family=Lato&family=Monoton&family=Montserrat&family=Noto+Sans&family=Open+Sans&family=Pacifico&family=Poppins&family=Sacramento&family=Smokum&family=Ubuntu&family=Tangerine&family=Tilt+Prism&display=swap" rel="stylesheet">
+   <!--   google icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+ <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+  <div class="title_bar">Book-1 - Excel</div>
+  <div class="menu_bar">
+    <div class="menu_file menu_item">File</div>
+    <div class="menu_home menu_item selected">Home</div>
+    <div class="menu_insert menu_item">Insert</div>
+    <div class="menu_Layout menu_item">Layout</div>
+    <div class="menu_help menu_item">Help</div>
+  </div>
+  <div class="menu_icon_bar"> 
+<!--     clipboard -->
+<div class="material-symbols-rounded menu_icon">content_paste</div>     
+<div class="material-symbols-rounded menu_icon">content_cut</div>
+<div class="material-symbols-rounded menu_icon">content_copy</div>
+<!--  selectors    -->
+  <select class="selector font_family" name="font-family">
+  <option style="font-family:Comic Neue;" value="Comic Neue">Comic Neue</option>
+ <option style="font-family:Poppins;" value="Poppins">Poppins</option>
+ <option style="font-family:EB Garamond;" value="EB Garamond" default>EB Garamond</option>
+  <option style="font-family:Noto Sans;" value="Noto Sans">Noto Sans</option>
+  <option style="font-family:Monotone;" value="Monotone">Monotone</option>
+  <option style="font-family:Montserrat;" value="Montserrat">Montserrat</option>
+  <option style="font-family:Pacifico;" value="Georgia">Pacifico</option>
+  <option style="font-family:Sacramento;" value="Sacramento">Sacramento</option>
+  <option style="font-family:Lato;" value="Lato">Lato</option>
+  <option style="font-family:Tilt Prism;" value="Tilt Prism">Tilt Prism</option>
+  <option style="font-family:Smokum;" value="Palatino">Smokum</option>
+  <option style="font-family:Ubuntu;" value="Ubuntu">Ubuntu</option>    
+  <option style="font-family:Tangerine;" value="Tangerine">Tangerine</option>  
+</select>
+<select class="selector font_size" name="font_size">
+  <option value="10">10</option>
+  <option value="12">12</option>
+  <option value="14">14</option>
+  <option value="16">16</option>
+  <option value="18">18</option>
+  <option value="20">20</option>
+  <option value="24">24</option>
+  <option value="32">32</option>
+  <option value="48">48</option>
+  <option value="55">55</option>
+  <option value="65">65</option>
+  <option value="75">75</option>
+</select>   
+<!--     font -->
+<div class="material-symbols-rounded menu_icon">format_bold</div>
+<div class="material-symbols-rounded menu_icon">format_italic</div>
+<div class="material-symbols-rounded menu_icon">format_underlined</div>
+<div class="material-symbols-rounded menu_icon">format_color_fill</div>
+<div class="material-symbols-rounded menu_icon">format_color_text</div>       
+<!--     alignment -->
+<div class="material-symbols-rounded menu_icon">format_align_left</div>
+<div class="material-symbols-rounded menu_icon">format_align_center</div>
+<div class="material-symbols-rounded menu_icon">format_align_right</div>    
+  </div>
+  <div class="formula_bar">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="data_container">
+    <div class="select_all"></div>
+    <div class="column_name_container">
+<!--      columns  -->
+    </div>
+    <div class="row_name_container">
+<!--       rows -->
+    </div>
+    <div class="input_cell_container">
+      <div class="cell_row">
+<!--      cells -->
+      </div>
+    </div>
+  </div>
+  <div class="sheet_bar">
+    <div class="scroller">
+      <div class="material-symbols-rounded scroller_icon">arrow_left</div>
+      <div class="material-symbols-rounded scroller_icon">arrow_right</div>
+    </div>
+    <div class="material-symbols-rounded add_icon">add</div>
+    <div class="sheet_tab_container">
+      <div class="sheet_tab">
+        Sheet-1
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+  
+<!--   Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.8.4/standalone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.6/emmet.cjs.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" defer crossorigin="anonymous"></script>
+</body>
+
+ <script src="script.js" defer></script> 
+</html>
