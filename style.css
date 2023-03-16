@@ -15,6 +15,7 @@ body{
   --white:#fff;
   --grey:grey;
   --light_grey:lightgrey;
+  --grey3:rgb(241,241,241);
   --black:#0000;
   
 }
@@ -62,6 +63,7 @@ body{
   height: 6vh;
   display:flex;
   align-items:center;
+  background-color: var(--grey3);
 }
 
 .menu_icon{
@@ -100,8 +102,42 @@ body{
 
 .formula_bar{
   height: 5vh;
-  border: 1px solid #0040ff;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 2px;
+  background-color: var(--grey3);
 }
+
+.formula_editor{
+border-top: 1px solid var(--light_grey);
+border-right: 1px solid var(--light_grey);
+border-left: 1px solid var(--light_grey);   
+background-color: var(--white);  
+padding: 0.2em 0.7em;
+display: flex;
+align-items: center;  
+outline-color: var(--green);
+}
+
+.show_selected_cell{
+    width: 20vw;
+    height: 75%;
+}
+
+.function_sign{
+  text-align: center;
+  height: 75%;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formula_input{
+  height: 75%;
+  width: calc(100vw - 23vw);
+}
+
 
 .data_container{
   height: 75vh;
@@ -160,6 +196,12 @@ body{
   border-right: 1px solid var(--grey);
   border-bottom: 1px solid var(--grey);
   cursor:cell;
+outline :none
+}
+
+.input_cell.selected{
+  border: 2px solid var(--green);
+  background-color: var(--white);
 }
 
 .sheet_bar{
@@ -205,4 +247,8 @@ padding: 0.2em 0em 0.2em 0em;
 
 .sheet_tab:hover{
   cursor:default;
+}
+
+.selected{
+  background-color: var(--light_grey);
 }

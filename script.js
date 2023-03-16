@@ -1,3 +1,4 @@
+import {RenderCells} from "./util_function.js"
 
 $(document).ready(function(){
 let input_cell_container = $(".input_cell_container")
@@ -15,18 +16,31 @@ for(let i=1;i<=N;i++){
 } 
 
 //adding cell
-for(let i=1;i<=N;i++){
-  let cell_row = $(`<div class="cell_row" data-rowId=${i}></div>`)
-  for(let j=1;j<=N;j++){
-    let code = document.getElementsByClassName("column_name")[j-1].dataset.colcode
-    // console.log(code);
-    let cell = $(`<div class="input_cell" contenteditable="true" data-row=${i} data-col=${j} data-code=${code}></div>`)
-    cell_row.append(cell);
-  }
-  input_cell_container.append(cell_row)
-}
-  
-  
+// for(let i=1;i<=N;i++){
+//   let cell_row = $(`<div class="cell_row" data-rowId=${i}></div>`)
+//   for(let j=1;j<=N;j++){
+//     let code = document.getElementsByClassName("column_name")[j-1].dataset.colcode
+//     // console.log(code);
+//     let cell = $(`<div class="input_cell" contenteditable="true" data-row=${i} data-col=${j} data-code=${code}></div>`)
+//     cell_row.append(cell);
+//   }
+//   input_cell_container.append(cell_row)
+// }
+RenderCells(input_cell_container,N)
+
+$('.align_icon').click(function(){
+  $('.align_icon.selected').removeClass('selected')
+  $(this).addClass('selected')
+})
+
+$('.style_icon').click(function(){
+  $(this).toggleClass('selected')
+})  
+
+$('.input_cell').click(function(){
+  $('.input_cell.selected').removeClass('selected')
+  $(this).addClass('selected')
+})  
 
 
 

@@ -60,18 +60,20 @@
   <option value="75">75</option>
 </select>   
 <!--     font -->
-<div class="material-symbols-rounded menu_icon">format_bold</div>
-<div class="material-symbols-rounded menu_icon">format_italic</div>
-<div class="material-symbols-rounded menu_icon">format_underlined</div>
+<div class="material-symbols-rounded menu_icon style_icon">format_bold</div>
+<div class="material-symbols-rounded menu_icon style_icon">format_italic</div>
+<div class="material-symbols-rounded menu_icon style_icon">format_underlined</div>
 <div class="material-symbols-rounded menu_icon">format_color_fill</div>
 <div class="material-symbols-rounded menu_icon">format_color_text</div>       
 <!--     alignment -->
-<div class="material-symbols-rounded menu_icon">format_align_left</div>
-<div class="material-symbols-rounded menu_icon">format_align_center</div>
-<div class="material-symbols-rounded menu_icon">format_align_right</div>    
+<div class="material-symbols-rounded menu_icon selected align_icon ">format_align_left</div>
+<div class="material-symbols-rounded menu_icon align_icon">format_align_center</div>
+<div class="material-symbols-rounded menu_icon align_icon">format_align_right</div>    
   </div>
   <div class="formula_bar">
-    <div></div>
+    <div class="formula_editor show_selected_cell" contenteditable="true"></div>
+    <div class="material-symbols-rounded function_sign">function</div>
+    <div class="formula_editor formula_input" contenteditable="true"></div>
     <div></div>
     <div></div>
   </div>
@@ -107,10 +109,10 @@
 
   
 <!--   Jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.8.4/standalone.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.6/emmet.cjs.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" defer crossorigin="anonymous"></script>
 </body>
 
- <script src="script.js" defer></script> 
+ <script type="module" src="script.js" defer></script> 
+ <script type="module" src="util_function.js" defer></script> 
 </html>
