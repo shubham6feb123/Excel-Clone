@@ -17,12 +17,13 @@ body{
   --light_grey:lightgrey;
   --grey3:rgb(241,241,241);
   --black:#0000;
-  
+  --red:#eb2d2d;
 }
 
 .container{
   height: 100vh;
   user-select: none;
+  position: relative;
 }
 
 .title_bar{
@@ -203,6 +204,7 @@ outline-color: var(--green);
 outline :none;
 overflow: hidden;
  word-wrap: inherit;
+   font-family: Poppins;
 }
 
 .input_cell.selected{
@@ -243,17 +245,33 @@ padding: 0em 0em 0.2em 0em;
 .sheet_tab_container{
   border:1px solid var(--light_grey);
   flex-grow:1;
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+  max-width: calc(100vw - 111px);
 }
 .sheet_tab_container .sheet_tab{
-  border-bottom: 4px solid var(--green);
   padding: 0em 0.2em;
-  width: 4.5em;
+  min-width: 4.5em;
   text-align:center;
   border-right:1px solid var(--light_grey);
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .sheet_tab:hover{
-  cursor:default;
+  cursor:pointer;
+  background-color: var(--light_grey);
+}
+
+.sheet_selected{
+  border-bottom: 4px solid var(--green);
+}
+
+.sheet_selected:hover{
+  cursor: default;
+  background: var(--white) !important;
 }
 
 .selected{
@@ -277,4 +295,104 @@ padding: 0em 0em 0.2em 0em;
 .input_cell.right_cell_selected{
   border-right:1x solid var(--light_grey);
 /*   border-top:none !important; */
+}
+
+.icon_color_fill{
+  position:relative;
+}
+
+.color_picker{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  cursor:pointer;
+}
+
+.sheet_options_modal{
+    position: absolute;
+    bottom: 5vh;
+    background: var(--white);
+/*     right: calc(100vw - 182px); */
+    height: 60px;
+    width: 71px;
+    z-index: 100;
+    box-shadow: 0 0 12px 0px var(--light_grey);
+    visibility: hidden;
+}
+
+.sheet_rename,.sheet_delete{
+  height: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet_rename:hover , .sheet_delete:hover{
+background-color: var(--light_grey);
+}
+
+/* sheet rename modal  */
+.sheet_rename_modal{
+    height: 155px;
+    width: 300px;
+    background: var(--white);
+    box-shadow: 0 0 12px 0px var(--light_grey);
+    position: absolute;
+    top: calc(100vh/2 - 78px);
+    left: calc(100vw/2 - 150px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    visibility: hidden;
+}
+
+.new_sheet_name{
+font-size: 18px;
+height: 22px;
+outline-color: var(--green);  
+padding: 10px 3px;  
+}
+
+.action_buttons{
+display: flex;
+justify-content: space-evenly;
+width: 100%;  
+}
+
+.rename_button , .cancel_button{
+  font-size: medium;
+  padding: 5px 11px;
+  cursor: pointer;
+  border: 1px solid var(--grey);
+  border-radius: 2px;
+}
+
+.rename_button{
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.cancel_button{
+  color: black;
+  background-color: var(--light_grey);
+}
+
+.rename_button:hover{
+  background-color: var(--green2);
+}
+
+.cancel_button:hover{
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.modal_title{
+font-size: 20px;
 }

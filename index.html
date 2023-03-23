@@ -26,22 +26,22 @@
   </div>
   <div class="menu_icon_bar"> 
 <!--     clipboard -->
-<div class="material-symbols-rounded menu_icon">content_paste</div>     
-<div class="material-symbols-rounded menu_icon">content_cut</div>
-<div class="material-symbols-rounded menu_icon">content_copy</div>
+<div class="material-symbols-rounded menu_icon icon_paste">content_paste</div>     
+<div class="material-symbols-rounded menu_icon icon_cut">content_cut</div>
+<div class="material-symbols-rounded menu_icon icon_copy">content_copy</div>
 <!--  selectors    -->
   <select class="selector font_family" name="font-family">
+  <option style="font-family:Poppins;" value="Poppins">Poppins</option>  
   <option style="font-family:Comic Neue;" value="Comic Neue">Comic Neue</option>
- <option style="font-family:Poppins;" value="Poppins">Poppins</option>
- <option style="font-family:EB Garamond;" value="EB Garamond" default>EB Garamond</option>
+ <option style="font-family:EB Garamond;" value="EB Garamond">EB Garamond</option>
   <option style="font-family:Noto Sans;" value="Noto Sans">Noto Sans</option>
   <option style="font-family:Monotone;" value="Monotone">Monotone</option>
   <option style="font-family:Montserrat;" value="Montserrat">Montserrat</option>
-  <option style="font-family:Pacifico;" value="Georgia">Pacifico</option>
+  <option style="font-family:Pacifico;" value="Pacifico">Pacifico</option>
   <option style="font-family:Sacramento;" value="Sacramento">Sacramento</option>
   <option style="font-family:Lato;" value="Lato">Lato</option>
   <option style="font-family:Tilt Prism;" value="Tilt Prism">Tilt Prism</option>
-  <option style="font-family:Smokum;" value="Palatino">Smokum</option>
+  <option style="font-family:Smokum;" value="Smokum">Smokum</option>
   <option style="font-family:Ubuntu;" value="Ubuntu">Ubuntu</option>    
   <option style="font-family:Tangerine;" value="Tangerine">Tangerine</option>  
 </select>
@@ -63,12 +63,19 @@
 <div class="material-symbols-rounded menu_icon style_icon icon_bold">format_bold</div>
 <div class="material-symbols-rounded menu_icon style_icon icon_italic">format_italic</div>
 <div class="material-symbols-rounded menu_icon style_icon icon_underline">format_underlined</div>
-<div class="material-symbols-rounded menu_icon">format_color_fill</div>
-<div class="material-symbols-rounded menu_icon">format_color_text</div>       
+<div class="menu_icon icon_color_fill" >
+  <input type="color" class="color_picker color_picker_background" name="color_picker_background"/>
+  <div class="material-symbols-rounded" class="">format_color_fill</div>
+</div>
+  <div class="menu_icon icon_color_fill" >
+  <input type="color" class="color_picker color_picker_text " name="color_picker_text"/>
+<div class="material-symbols-rounded" class="">format_color_text</div>     
+</div>  
+  
 <!--     alignment -->
-<div class="material-symbols-rounded menu_icon selected align_icon ">format_align_left</div>
-<div class="material-symbols-rounded menu_icon align_icon">format_align_center</div>
-<div class="material-symbols-rounded menu_icon align_icon">format_align_right</div>    
+<div class="material-symbols-rounded menu_icon selected align_icon icon_left">format_align_left</div>
+<div class="material-symbols-rounded menu_icon align_icon icon_center">format_align_center</div>
+<div class="material-symbols-rounded menu_icon align_icon icon_right">format_align_right</div>    
   </div>
   <div class="formula_bar">
     <div class="formula_editor show_selected_cell" contenteditable="true"></div>
@@ -93,16 +100,33 @@
   </div>
   <div class="sheet_bar">
     <div class="scroller">
-      <div class="material-symbols-rounded scroller_icon">arrow_left</div>
-      <div class="material-symbols-rounded scroller_icon">arrow_right</div>
+      <div class="material-symbols-rounded scroller_icon" name="scroller_icon_left" id="scroller_icon_left">arrow_left</div>
+      <div class="material-symbols-rounded scroller_icon" name="scroller_icon_right" id="scroller_icon_right">arrow_right</div>
     </div>
     <div class="material-symbols-rounded add_icon">add</div>
     <div class="sheet_tab_container">
-      <div class="sheet_tab">
-        Sheet-1
+      <div class="sheet_tab sheet_selected">
+        sheet-1
       </div>
     </div>
   </div>
+
+<!--   Modal for sheet deletion and rename option -->
+  <div class="sheet_options_modal">
+    <div class="sheet_rename">Rename</div>
+    <div class="sheet_delete">Delete</div>
+  </div>
+
+<!--  Detailed Modal for sheet rename -->
+    <div class="sheet_rename_modal">
+    <h4 class="modal_title">Rename Sheet To:</h4>
+    <input type="text" class="new_sheet_name" placeholder="Sheet Name"/>
+    <div class="action_buttons">
+      <button class="rename_button">Rename</button>
+      <button class="cancel_button">Cancel</button>
+    </div>
+  </div>
+  
 </div>
   
 
